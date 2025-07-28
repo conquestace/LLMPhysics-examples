@@ -21,7 +21,7 @@ This project simulates a real-world particle physics analysis to determine the n
     *   Data analysis techniques in high-energy physics
 
 *   **In This Directory:**
-        `/code`: The complete, well-commented Python source code for the simulation.
+    *    `/code`: The complete, well-commented Python source code for the simulation.
     *   `/tex`: The full report written in LaTeX, including the compiled PDF (`analyzing-collider-events.pdf`). This explains the theory, methodology, and results in detail.
 
 ### 2. Simulating Two-Body Decays
