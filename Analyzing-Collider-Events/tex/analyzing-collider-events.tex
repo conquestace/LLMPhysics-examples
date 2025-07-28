@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsfonts} % For using math fonts
+\usepackage{graphicx} % For including images
+\usepackage{geometry} % For page layout
+\usepackage{hyperref} % For hyperlinks
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz-feynman}
+\usepackage{float} 
+\usepackage{listings}
+\usepackage{transparent}
+\usepackage{enumitem}
+
+\usepackage{feynmp-auto} % For Feynman diagrams
+
+
+\lstset{ 
+  language=Python,                 % choose the language of the code
+  basicstyle=\ttfamily\footnotesize, % set the font to typewriter (monospace)
+  numbers=left,                    % display line numbers
+  keywordstyle=\color{blue}\bfseries,      % Color and bold for keywords
+  commentstyle=\color{gray},              % Color for comments
+  stringstyle=\color{red},                 % Color for strings
+  identifierstyle=\color{black},           % Color for identifiers
+  numberstyle=\tiny\color{gray},    % set the style of line numbers
+  stepnumber=1,                    % step between two line numbers
+  numbersep=5pt,                   % distance of line numbers from the code
+  backgroundcolor=\color{white},   % set background color
+  showspaces=false,                % don't show spaces as underscores
+  showstringspaces=false,          % don't emphasize spaces in strings
+  showtabs=false,                  % don't show tabs
+  frame=single,                    % add a frame around the code
+  tabsize=2,                       % set default tab size
+  captionpos=b,                    % set caption position to bottom
+  breaklines=true,                 % automatic line breaking
+  breakatwhitespace=false,         % break lines at whitespace
+  escapeinside={\%*}{*)},          % if you want to add LaTeX inside the code
+}
+
+\newcommand{\hrulewithspace}{\vspace{10pt}\hrule\vspace{10pt}}
+
+
+\usepackage{titling}   
+
+
+
+
+\usepackage{titlesec}
+
+% Section formatting
+\titleformat{\section}
+  {\normalfont\large\bfseries} % Common formatting for both numbered and unnumbered
+  {\ifnum\value{section}>0 \thesection \else \fi} % Display section number if it's numbered, otherwise nothing
+  {0.5em}
+  {\ifnum\value{section}>0 \raggedright \else \centering \fi} % Left align if numbered, center if unnumbered
+  []
+
+
+% Page layout
+\geometry{
+    margin=1in
+}
+
+
+\begin{document}
+\input{Title/title1.tex}
+
+\newpage
+\begin{center}
+  {\large \textbf{Analyzing Collider Events}}
+\setcounter{section}{0}
+\end{center}
+\input{AnalyzingColliderEvents/main.tex}
+
+%bibliography
+\newpage
+\nocite{*}
+\bibliographystyle{plain} % or use plain, alpha, ieeetr, etc.
+\bibliography{references}
+
+\end{document}
+

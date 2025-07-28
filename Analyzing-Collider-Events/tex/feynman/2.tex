@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{axodraw2}
+\usepackage{pict2e} % Required for drawing commands
+
+\begin{document}
+
+\begin{center}
+  \begin{axopicture}(200,100)
+    % Fermion lines (e- and e+)
+    \ArrowArc(50,50)(30,0,180)  % e- (left arc)
+    \ArrowArc(50,50)(30,180,360) % e+ (right arc)
+    
+    % Photon (wavy line)
+    \Photon(50,80)(150,80){3}{6} % (x1,y1)(x2,y2){amplitude}{wavelength}
+    
+    % Outgoing fermions (muons)
+    \ArrowArc(150,50)(30,0,180)  % μ- (left arc)
+    \ArrowArc(150,50)(30,180,360) % μ+ (right arc)
+    
+    % Labels
+    \Text(20,50)[r]{\(e^-\)}     % e- label
+    \Text(20,50)[r]{\(e^+\)}     % e+ label
+    \Text(180,50)[l]{\(\mu^-\)}  % μ- label
+    \Text(180,50)[l]{\(\mu^+\)}  % μ+ label
+    \Text(100,90)[b]{\(\gamma\)} % photon label
+  \end{axopicture}
+\end{center}
+
+\end{document}

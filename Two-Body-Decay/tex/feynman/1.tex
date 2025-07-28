@@ -1,0 +1,20 @@
+\documentclass[11pt]{article}
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{} % for being able to read the produced file
+
+\begin{document}
+
+\begin{fmffile}{afilename}% choose something better!
+\begin{fmfgraph}(40,25)
+\fmfpen{thick}
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmf{fermion}{i1,v1,v3,o1}
+\fmf{fermion}{o2,v4,v2,i2}
+\fmf{photon}{v1,v2}
+\fmf{photon}{v3,v4}
+\fmfdotn{v}{4}
+\end{fmfgraph}
+\end{fmffile}
+
+\end{document}
